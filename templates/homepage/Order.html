@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <style>
+            .top
+            {   width:100vw;
+                height:100vh;
+                background-color: rgb(250,218,83);
+                overflow:hidden;
+                padding-bottom: 8%;
+            }
+            
+            .nav-left
+            {
+                float:left;
+                padding-top: 11px;
+                padding-left: 30px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 24px;
+                color:rgb(255, 255, 255);
+            }
+            .nav-right
+            {
+                float:right;
+                padding-top: 22px;
+            }
+            .nav-right li
+            {
+                display: inline-block;
+            }
+            .nav-right a
+            {
+                padding-right: 20px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 14px;
+                color:rgb(255, 255, 255);
+                letter-spacing:1px;
+                text-decoration: none;
+            }
+            .nav-right a:link
+            {
+                list-style:none;
+            }
+
+            .Grey
+            {
+                width:100vw;
+                height:92vh;
+                margin-top:80px;
+                background-color:rgb(180, 180, 180)
+            }
+
+            .outer {
+                width: 50px;
+                height: 16px;
+                display: table;
+            }
+            .inner {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .welcome
+            {
+                float: left;
+                padding-top: 10px;
+                padding-left: 50%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 14px;
+                font-weight:bold;
+                color:rgb(250,218,83);
+                letter-spacing:2px;
+                text-align:center;
+            }
+            .welcome:hover{
+                color: rgb(250,218,83);;
+            }
+            .username:hover{
+                color: rgb(250,218,83);;
+            }
+            .username
+            {
+                float: left;
+                padding-top: 2px;
+                padding-left: 50%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 12px;
+                color:rgb(250,218,83);
+                letter-spacing:3px;
+                text-align:center;
+            }
+
+            .main
+            {
+                margin-top: 10px;
+                padding-top: 20px;
+                width:88vw;
+                height:76vh;
+                background-color:rgb(248, 248, 248);
+                border-radius: 30px;
+            }
+
+            table.gridtable
+            {
+                width: 80vw;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 12px;
+                color:rgb(44, 44, 44);
+                border-width: 1px;
+                border-color: rgb(88, 88, 88);
+                border-collapse: collapse;
+            }
+            table.gridtable th{
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: rgb(88, 88, 88);
+                background-color:rgb(238, 238, 238);
+                font-size: 12px;
+            }
+            table.gridtable td{
+                border-width: 1px;
+                padding: 8px;
+                border-style: solid;
+                border-color: rgb(88, 88, 88);
+                background-color:rgb(240, 240, 240);
+                font-size: 12px;
+            }
+            .footer
+            {
+                padding-top: 6vh;
+                /* padding-bottom: 5px; */
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 12px;
+                font-weight:bold;
+                color:rgb(185,185,185);
+                letter-spacing:1px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class = "menu">
+                <h1 class="nav-left">BIKE SHARE SYSTEM</h1>
+                <ul class="nav-right">
+                    <li>
+                        <a href="MapCst.html">MAP</a>
+                    </li>
+                    <li>
+                        <a href="Order.html">ORDER</a>
+                    </li>
+                    <li>
+                        <a href="Report.html">REPORT</a>
+                    </li>
+                    <li>
+                        <a href="Account.html">ACCOUNT</a>
+                    </li>
+                    <li>
+                        <a href="Login.html">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Grey">
+                <div class="outer">
+                    <div class="inner">
+                        <a class="welcome">WELCOME</a>
+                        <a class="username">USERNAME</a>
+                    </div>
+                </div>
+                <center>
+                <div class="main">
+                    <table class="gridtable" >
+                        <tr>
+                            <th width="20%">OrderId</th>
+                            <th width="18%">Duration</th>
+                            <th width="18%">Rental(£)</th>
+                            <th width="18%">Status</th>
+                            <th>Operation</th>
+                        </tr>
+                        <tr>
+                            <td>202110050011</td>
+                            <td>12min</td>
+                            <td>1.0</td>
+                            <td>Ongoing</td>
+                            <td>
+                                <input type="button" id="btn" value="View Detail" />
+                                <input type="button" id="btn" value="Return" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>202110030008</td>
+                            <td>5min</td>
+                            <td>1.0</td>
+                            <td>Unpaid</td>
+                            <td>
+                                <input type="button" id="btn" value="View Detail" />
+                                <input type="button" id="btn" value="Pay" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>202110010001</td>
+                            <td>8min</td>
+                            <td>1.0</td>
+                            <td>Finished</td>
+                            <td>
+                                <input type="button" id="btn" value="View Detail" />
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                </center>
+            </div>
+            <div class="footer">@2021 O-LAB2-TEAM2</div>
+        </div>
+</html>
